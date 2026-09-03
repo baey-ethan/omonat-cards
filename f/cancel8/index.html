@@ -1,0 +1,153 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>안 쓰면서 계속 내는 돈 8 — 해지 가이드 · 일단공유</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Pdr','Pretendard','Malgun Gothic',sans-serif;color:#1c1c1e;background:#F7F6F0;
+ background-image:linear-gradient(rgba(70,110,160,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(70,110,160,.13) 1px,transparent 1px);background-size:28px 28px;line-height:1.55;font-size:15.5px}
+.wrap{max-width:720px;margin:0 auto;padding:22px 16px 110px}
+mark{background:linear-gradient(transparent 45%,#FFF27A 45%);color:inherit;font-weight:700;padding:0 1px}
+header .brand{font-size:13px;font-weight:700;color:#3a3a3a;display:flex;align-items:center;gap:6px}
+header .brand i{width:9px;height:9px;border-radius:50%;background:#0E9F6E;display:inline-block}
+header h1{font-size:30px;font-weight:900;line-height:1.2;letter-spacing:-.02em;margin:10px 0 6px;background:#1c1c1e;color:#fff;display:inline-block;padding:8px 14px;border-radius:6px}
+header .sub{font-size:16px;font-weight:700;color:#2a2a2e;margin-top:8px}
+header .intro{margin-top:12px;background:#fff;border:2px solid #1c1c1e;border-radius:8px;padding:12px 14px;font-size:15px}
+header .asof{font-size:12px;color:#6b6b73;margin-top:8px}
+.toc{margin:18px 0 8px;background:#fff;border:2px solid #1c1c1e;border-radius:8px;padding:12px 14px}
+.toc h3{font-size:14px;font-weight:800;margin-bottom:8px;color:#3a3a3a}
+.toc ol{list-style:none}.toc li a{display:flex;align-items:baseline;gap:8px;padding:5px 0;border-top:1px dashed #d9d9de;color:inherit;text-decoration:none;font-weight:700;font-size:14.5px}
+.toc li:first-child a{border-top:0}.toc li a span{color:#0E9F6E;font-weight:900;font-size:13px}.toc li a em{margin-left:auto;font-style:normal;font-weight:500;color:#6b6b73;font-size:12.5px;text-align:right}
+.item{background:#fff;border:2px solid #1c1c1e;border-radius:10px;padding:16px 14px 12px;margin-top:18px;box-shadow:0 6px 16px rgba(20,30,50,.08);break-inside:avoid;page-break-inside:avoid}
+.ih{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.ic{border-radius:11px;display:inline-flex;align-items:center;justify-content:center;flex:none;box-shadow:inset 0 -3px 0 rgba(0,0,0,.14)}
+.ih .num{font-size:12px;font-weight:900;color:#0E9F6E;letter-spacing:.06em}
+.ih h2{font-size:21px;font-weight:900;letter-spacing:-.015em;line-height:1.2}
+.ih .amt{font-size:13.5px;font-weight:700;color:#2a2a2e;margin-top:3px}
+.row{display:grid;grid-template-columns:78px 1fr;gap:10px;align-items:start;padding:9px 0;border-top:1px solid #ececf0}
+.lb{font-size:13px;font-weight:900;padding:4px 8px;border-radius:4px;text-align:center;transform:rotate(-1.5deg);box-shadow:0 2px 5px rgba(0,0,0,.1)}
+.lb.warn{background:#F7C9D2}.lb.link{background:#FFE79A}
+.row p{font-size:15px}
+.prep{list-style:none}.prep li{padding-left:18px;position:relative;font-size:15px}.prep li::before{content:'☐';position:absolute;left:0;color:#0E9F6E;font-weight:900}
+.steps{list-style:none;counter-reset:s}.steps li{counter-increment:s;display:grid;grid-template-columns:24px 1fr;gap:8px;padding:5px 0;font-size:15px}
+.steps li::before{content:counter(s);width:22px;height:22px;border-radius:50%;background:#1c1c1e;color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.steps li b{display:block;font-weight:900;font-size:15px}.steps li span{display:block;color:#2a2a2e}
+.when{font-weight:700}
+.traps{list-style:none}.traps li{padding-left:16px;position:relative;font-size:14.5px;color:#2a2a2e}.traps li::before{content:'!';position:absolute;left:0;color:#E5322D;font-weight:900}
+.links{display:flex;flex-wrap:wrap;gap:8px}.links a,.links span{display:inline-flex;flex-direction:column;background:#F7F6F0;border:1.5px solid #1c1c1e;border-radius:8px;padding:6px 10px;color:inherit;text-decoration:none;font-weight:800;font-size:14px}
+.links small{font-weight:500;color:#6b6b73;font-size:11.5px}
+.src{font-size:11.5px;color:#8a8a92;margin-top:8px;text-align:right}
+.check{margin-top:20px;background:#1c1c1e;color:#fff;border-radius:10px;padding:16px 14px;break-inside:avoid}
+.check h3{font-size:18px;font-weight:900;margin-bottom:8px}.check h3 b{color:#8FE3C0}
+.check ul{list-style:none}.check li{display:flex;gap:10px;align-items:flex-start;padding:5px 0;border-top:1px solid #3a3a40;font-size:15px}
+.check li:first-child{border-top:0}.check li i{width:18px;height:18px;border:2px solid #8FE3C0;border-radius:4px;flex:none;margin-top:3px}
+.check mark{background:linear-gradient(transparent 45%,rgba(143,227,192,.55) 45%);color:#fff}
+.foot{font-size:12px;color:#6b6b73;margin-top:16px;line-height:1.5}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(247,246,240,.96);border-top:2px solid #1c1c1e;padding:10px 12px}
+.barin{max-width:720px;margin:0 auto;display:flex;gap:8px}
+.btn{flex:1;text-align:center;padding:12px;border-radius:8px;font-weight:900;text-decoration:none;font-size:15px;border:2px solid #1c1c1e}
+.btn.pdf{background:#1c1c1e;color:#fff}.btn.ig{background:#8FE3C0;color:#111}
+@media print{
+ @page{size:A4;margin:12mm 11mm}
+ body{background:#fff;background-image:none;font-size:11.5pt}
+ .wrap{max-width:none;padding:0}.bar{display:none}
+ .item{box-shadow:none;margin-top:12px}.toc{page-break-after:always}
+ header h1{font-size:22pt}
+ a{color:inherit}
+}
+</style></head><body>
+<div class="wrap">
+ <header>
+  <div class="brand"><i></i>일단공유 · @ildan_share_</div>
+  <h1>안 쓰면서 계속 내는 돈 8 — 해지 가이드</h1>
+  <p class="sub">카드에서 본 8개, 오늘 실제로 끊는 순서</p>
+  <p class="intro">전부 본인이 끊어야 멈추고, 전부 폰으로 끝납니다. 항목마다 「누가 · 준비물 · 순서 · 기한 · 여기서 막힘」 다섯 칸으로 적었어요. 화면 이름은 각 사업자 공식 안내에서 그대로 옮겼고, 앱 버전에 따라 한두 글자 다를 수 있습니다. 뭐가 나가는지부터 모르겠으면 맨 아래 체크리스트 첫 줄(어카운트인포)부터.</p>
+  <p class="asof">2026-09 기준 · 요금·구독료 숫자는 안 적음</p>
+ </header>
+ <nav class="toc"><h3>차례 — 위에서부터 5분씩</h3><ol><li><a href="#i1"><span>01</span>통신 부가서비스 해지<em>가입 목록에 항목별 월 요금 표시 — 사람마다 다름</em></a></li><li><a href="#i2"><span>02</span>앱 구독 취소<em>구독 목록에 항목별 금액·다음 결제일 표시</em></a></li><li><a href="#i3"><span>03</span>소액결제 한도 0원 · 차단<em>통신사 앱 「휴대폰결제 내역」에 이번 달 결제분 표시</em></a></li><li><a href="#i4"><span>04</span>장기수선충당금 돌려받기<em>관리비 고지서 「장기수선충당금」 줄 × 살았던 개월 수</em></a></li><li><a href="#i5"><span>05</span>안 보는 OTT 해지<em>안 보는 달 한 달치 전액</em></a></li><li><a href="#i6"><span>06</span>장롱 카드 해지 · 연회비 환급<em>연회비 전액(연 1회) · 해지하면 남은 기간분 일할 환급</em></a></li><li><a href="#i7"><span>07</span>약정 끝난 요금제 — 25% 재신청<em>월 통신요금의 25%</em></a></li><li><a href="#i8"><span>08</span>배달 구독 — 손익분기 재고 후 해지<em>구독료 − (지난달 주문 횟수 × 회당 절감 배달비) — 양수면 그만큼 손해</em></a></li></ol></nav>
+ 
+  <section class="item" id="i1">
+    <div class="ih"><span class="ic" style="width:44px;height:44px;background:#2F80ED"><svg viewBox="0 0 100 100" width="31.68" height="31.68"><rect x="30" y="12" width="40" height="76" rx="8" fill="#fff"/><rect x="36" y="22" width="28" height="48" rx="2" fill="#2F80ED"/><circle cx="50" cy="79" r="4" fill="#2F80ED"/></svg></span><div><div class="num">01</div><h2>통신 부가서비스 해지</h2><div class="amt">가입 목록에 항목별 월 요금 표시 — 사람마다 다름</div></div></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">누가</div><p>개통할 때 「한 달 무료」로 붙은 컬러링·휴대폰보험·안심 서비스를 그 뒤로 한 번도 안 본 사람. 가입된 줄도 모르는 게 꼭 하나씩 나옵니다.</p></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">준비물</div><ul class="prep"><li>통신사 앱 로그인(본인인증) — 마이케이티 · T world · 당신의 U+</li><li><mark>명의자 본인</mark> 폰이어야 앱에서 바로 됨 — 가족 명의면 명의자가 하거나 고객센터</li></ul></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">순서</div><ol class="steps"><li><div><b>가입 부가서비스 목록 열기</b><span>KT는 마이케이티 앱 <mark>[메뉴 → 마이 → 요금/서비스 → 부가서비스 조회/변경]</mark>. SKT·U+도 앱의 「나의 가입정보 → 부가서비스」 계열 메뉴에 같은 목록이 있어요.</span></div></li><li><div><b>유료 항목만 골라내기</b><span>목록에서 월 요금이 붙은 것만 봅니다. 이름이 낯설면 안 쓰는 겁니다 — 컬러링·통화연결음·안심·보험·데이터 부가 순으로 걸러요.</span></div></li><li><div><b>하나씩 「해지」</b><span>각 항목 옆 해지 버튼 → 유의사항 확인 → 진행. KT 공식 안내는 이 화면에서 바로 완료된다고 적혀 있어요.</span></div></li><li><div><b>앱에서 안 되면 전화</b><span>SKT 114 · KT 100 · U+ 101(휴대폰에서 무료). 정지 중인 회선 등 앱에서 막히는 경우는 고객센터로.</span></div></li></ol></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">기한</div><p class="when">기한 없음. 해지 즉시 다음 청구분부터 빠지니 <mark>오늘</mark>.</p></div>
+    <div class="row"><div class="lb warn">여기서 막힘</div><ul class="traps"><li>휴대폰보험은 해지하면 <mark>재가입이 안 되거나 조건이 붙는</mark> 상품이 있어요 — 기기 바꾼 지 얼마 안 됐으면 이건 남겨두고 판단.</li><li>요금제에 <mark>묶여 있는</mark> 부가서비스는 해지 버튼이 없어요(요금제를 바꿔야 빠짐). 그 항목은 「약정 끝난 요금제」 칸에서 같이 처리.</li><li>가족 결합 대표 회선의 부가서비스는 대표자 앱에서만 보입니다.</li></ul></div>
+    <div class="row"><div class="lb link">어디서</div><div class="links"><a href="https://help.kt.com/servicetip/ServiceTipInfo.do?idx=991">KT 부가서비스 해지 안내 <small>help.kt.com/servicetip/ServiceTipInfo.do?idx=991</small></a><span>T world · 당신의 U+ 앱 <small>앱스토어·플레이스토어</small></span></div></div>
+    <div class="src">출처 · 18_새는돈 · 52_통신비 · KT 고객지원(help.kt.com idx 991, 2026-09-03 확인) · T world FAQ(정지 중 해지는 114)</div>
+  </section>
+  <section class="item" id="i2">
+    <div class="ih"><span class="ic" style="width:44px;height:44px;background:#D64B4B"><svg viewBox="0 0 100 100" width="31.68" height="31.68"><path d="M20 70a30 30 0 1 1 60 0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/><path d="M50 70L66 44" stroke="#fff" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="70" r="7" fill="#fff"/></svg></span><div><div class="num">02</div><h2>앱 구독 취소</h2><div class="amt">구독 목록에 항목별 금액·다음 결제일 표시</div></div></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">누가</div><p>무료체험 눌러본 적 있는 사람 전원. 앱을 지워도 구독은 살아 있습니다 — Google Play 공식 안내에 「앱을 제거해도 정기 결제가 취소되지는 않습니다」라고 적혀 있어요.</p></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">준비물</div><ul class="prep"><li>아이폰: Apple 계정 로그인된 상태</li><li>갤럭시·안드로이드: Play 스토어에 로그인된 구글 계정 — <mark>결제한 계정</mark>이어야 목록에 보임</li></ul></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">순서</div><ol class="steps"><li><div><b>아이폰</b><span><mark>설정 → 맨 위 내 이름 → 구독</mark> → 항목 선택 → <mark>구독 취소</mark>. Apple 지원 문서 그대로예요.</span></div></li><li><div><b>갤럭시·안드로이드</b><span><mark>Play 스토어 → 프로필 → 결제 및 정기 결제 → 정기 결제</mark> → 항목 선택 → <mark>정기 결제 취소</mark> → 안내 따라가기.</span></div></li><li><div><b>둘 다 열어보기</b><span>같은 폰이라도 앱스토어 결제와 웹에서 카드로 직접 낸 구독은 목록이 달라요. 카드로 낸 건 <mark>어카운트인포 「카드자동납부」</mark>에서 잡힙니다(체크리스트 첫 줄).</span></div></li><li><div><b>취소 후 확인</b><span>취소해도 이미 낸 기간까지는 그대로 쓸 수 있어요(Google 공식). 목록에 「만료 예정」으로 바뀌면 끝.</span></div></li></ol></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">기한</div><p class="when">무료체험은 <mark>체험 종료 최소 24시간 전</mark>에 취소해야 과금이 안 붙어요(Apple 공식). 기한 지나면 한 달치는 나갑니다.</p></div>
+    <div class="row"><div class="lb warn">여기서 막힘</div><ul class="traps"><li>「구독 취소」 버튼이 안 보이면 이미 만료됐거나, <mark>앱 안에서 따로 해지</mark>해야 하는 상품이에요 — 그 앱의 설정·계정 메뉴를 보세요.</li><li>가족 공유(Apple 가족·Google 패밀리)로 낸 구독은 <mark>결제한 사람</mark> 계정에서만 취소돼요.</li><li>취소가 아니라 「일시중지」를 눌러놓고 끝난 줄 아는 경우 — 목록 상태 문구를 다시 확인.</li></ul></div>
+    <div class="row"><div class="lb link">어디서</div><div class="links"><a href="https://support.apple.com/ko-kr/118428">Apple 구독 취소 <small>support.apple.com/ko-kr/118428</small></a><a href="https://support.google.com/googleplay/answer/7018481?hl=ko">Google Play 정기 결제 취소 <small>support.google.com/googleplay/answer/7018481?hl=ko</small></a></div></div>
+    <div class="src">출처 · 18_새는돈 · Apple 지원 118428 · Google Play 고객센터 7018481 (둘 다 2026-09-03 확인)</div>
+  </section>
+  <section class="item" id="i3">
+    <div class="ih"><span class="ic" style="width:44px;height:44px;background:#3B3F4A"><svg viewBox="0 0 100 100" width="31.68" height="31.68"><rect x="24" y="44" width="52" height="40" rx="8" fill="#fff"/><path d="M34 44v-10a16 16 0 0 1 32 0v10" fill="none" stroke="#fff" stroke-width="8"/><circle cx="50" cy="63" r="5" fill="#3B3F4A"/></svg></span><div><div class="num">03</div><h2>소액결제 한도 0원 · 차단</h2><div class="amt">통신사 앱 「휴대폰결제 내역」에 이번 달 결제분 표시</div></div></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">누가</div><p>휴대폰 결제를 평소에 안 쓰는 사람. 안 쓰는데 한도가 열려 있으면 모르는 정기결제가 숨는 자리이고, 명의도용 피해도 여기로 들어옵니다.</p></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">준비물</div><ul class="prep"><li>통신사 앱 로그인(명의자 본인)</li><li>한도를 <mark>내리는 건</mark> 추가 인증 없이 바로, <mark>올리는 건</mark> 추가 인증 필요(KT 공식) — 그러니 내리는 쪽은 부담 없이</li></ul></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">순서</div><ol class="steps"><li><div><b>결제 내역부터 열기</b><span>KT는 마이케이티 <mark>[메뉴 → 마이 → 요금/서비스 → 요금조회 → 휴대폰결제 내역]</mark>. 최근 몇 달에 모르는 정기결제가 있는지 먼저 봅니다.</span></div></li><li><div><b>한도 변경 · 차단</b><span>같은 화면의 <mark>[이용한도 상세내역 및 한도변경/결제차단] → [변경/차단] → 한도금액 설정 → [변경]</mark>(KT). 아예 안 쓸 거면 그 옆 <mark>[원천차단]</mark>. SKT는 T world <mark>「휴대폰결제 변경 → 이용제한/한도변경」</mark>, U+는 U+고객센터 앱 <mark>「소액결제 조회 → 한도변경/차단」</mark>.</span></div></li><li><div><b>안 되면 전화</b><span>세 통신사 모두 고객센터(114)·대리점(신분증)에서 차단 신청 가능(T world·U+ 공식 안내).</span></div></li><li><div><b>다시 쓸 일 생기면</b><span>그때 한도를 올리면 돼요 — 다만 <mark>올릴 땐 본인인증</mark>이 다시 붙습니다(KT·U+ 공식). 그게 이 설정의 목적이에요.</span></div></li></ol></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">기한</div><p class="when">기한 없음. 내리는 건 <mark>즉시 적용</mark>(KT 공식)이니 오늘.</p></div>
+    <div class="row"><div class="lb warn">여기서 막힘</div><ul class="traps"><li>메뉴에 <mark>「콘텐츠이용료」</mark>가 소액결제와 따로 있으면 그것도 같이 내려요 — 한쪽만 막고 끝난 줄 아는 경우가 많습니다.</li><li>「차단」과 「한도 0원」은 다른 메뉴예요. 차단은 해제할 때 본인인증·비밀번호가 필요하고(U+ 공식), 한도 변경은 숫자만 바꾸는 것 — 안 쓸 거면 차단이 더 확실.</li><li>가족 명의 회선은 명의자 본인이 해야 해요.</li></ul></div>
+    <div class="row"><div class="lb link">어디서</div><div class="links"><a href="https://help.kt.com/servicetip/ServiceTipInfo.do?idx=993">KT 소액결제 한도 변경 <small>help.kt.com/servicetip/ServiceTipInfo.do?idx=993</small></a><a href="https://help.kt.com/servicetip/ServiceTipInfo.do?idx=1037">KT 소액결제 원천차단 <small>help.kt.com/servicetip/ServiceTipInfo.do?idx=1037</small></a><a href="https://www.tworld.co.kr/poc/html/center/CS6.1.1T.3T.2.html">T world 휴대폰결제 피해예방 <small>tworld.co.kr/poc/html/center/CS6.1.1T.3T.2.html</small></a></div></div>
+    <div class="src">출처 · 18_새는돈 · 52_통신비 · KT 고객지원(idx 993·1037) · T world 휴대폰결제 피해예방 페이지 · LG U+ 뉴스룸 5091 (2026-09-03 확인)</div>
+  </section>
+  <section class="item" id="i4">
+    <div class="ih"><span class="ic" style="width:44px;height:44px;background:#3B82F6"><svg viewBox="0 0 100 100" width="31.68" height="31.68"><path d="M50 18L14 50h10v32h20V62h12v20h20V50h10z" fill="#fff"/></svg></span><div><div class="num">04</div><h2>장기수선충당금 돌려받기</h2><div class="amt">관리비 고지서 「장기수선충당금」 줄 × 살았던 개월 수</div></div></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">누가</div><p>아파트·오피스텔 등 공동주택에 <mark>전월세로</mark> 사는 사람. 장기수선충당금은 건물 수리를 위해 쌓는 돈이라 <mark>소유자 부담</mark>이 원칙인데, 관리비 고지서에 섞여 나와 세입자가 매달 대신 내는 구조가 흔해요.</p></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">준비물</div><ul class="prep"><li>관리비 고지서 한 장(「장기수선충당금」 줄이 있는지)</li><li>임대차계약서(특약란)</li><li>관리사무소 연락처</li></ul></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">순서</div><ol class="steps"><li><div><b>고지서에서 줄 찾기</b><span>「장기수선충당금」 항목과 월 금액을 확인. 이 줄이 없으면(빌라·단독 등) 이 항목은 해당 없음.</span></div></li><li><div><b>계약서 특약 확인</b><span>특약에 장기수선충당금을 세입자가 부담한다고 적혀 있는지 봅니다. <mark>없으면</mark> 원칙대로 집주인 몫 — 카드 덱(57)에서 「계약서 확인」이라고 한 게 이 지점이에요.</span></div></li><li><div><b>이사 나갈 때 납부확인서</b><span>관리사무소에 <mark>「장기수선충당금 납부확인서」</mark>를 요청. 관리주체는 사용자가 요구하면 <mark>지체 없이 발급</mark>해야 해요(공동주택관리법 시행령 제31조 ⑨).</span></div></li><li><div><b>집주인에게 반환 청구</b><span>확인서 금액을 보증금 정산 때 같이 받습니다. 근거는 <mark>시행령 제31조 ⑧ 「소유자는 사용자가 대신 납부한 경우 그 금액을 반환하여야 한다」</mark> — 이 한 줄이면 대화가 짧아져요.</span></div></li></ol></div>
+    <div class="row"><div class="lb" style="background:#FBD5D5">기한</div><p class="when">이사 나가는 날 <mark>보증금 정산과 한 번에</mark>. 지금 할 일은 고지서·계약서 확인 두 가지뿐.</p></div>
+    <div class="row"><div class="lb warn">여기서 막힘</div><ul class="traps"><li>집주인이 「그런 게 있느냐」고 하는 게 제일 흔해요 — 조문 번호(시행령 제31조 ⑧)와 납부확인서를 같이 보여주세요.</li><li>몇 년치 확인서는 관리사무소가 정리하는 데 시간이 걸릴 수 있으니 <mark>이사 전 미리</mark> 요청.</li><li>특약에 세입자 부담이 적혀 있으면 이야기가 달라져요 — 그 경우는 계약 내용이 우선이니 먼저 확인.</li></ul></div>
+    <div class="row"><div class="lb link">어디서</div><div class="links"><a href="https://www.law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=132107&amp;chrClsCd=010202">공동주택관리법 시행령(국가법령정보센터) <small>law.go.kr/lsLinkCommonInfo.do?lspttninfSeq=132107&amp;chrClsCd=010202</small></a><a href="https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=1248&amp;ccfNo=5&amp;cciNo=2&amp;cnpClsNo=2">찾기쉬운 생활법령 · 장기수선충당금 <small>easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=1248&amp;ccfNo=5&amp;cciNo=2&amp;cnpClsNo=2</small></a></div></div>
+    <div class="src">출처 · 57_관리비 · 공동주택관리법 시행령 제31조 ⑧·⑨(법제처 국가법령정보센터, 2026-09-03 확인) · 찾기쉬운 생활법령정보</div>
+  </section>
+  <section class="item" id="i5">
+    <div class="ih"><span class="ic" style="width:44px;height:44px;background:#1F9D8A"><svg viewBox="0 0 100 100" width="31.68" height="31.68"><rect x="14" y="20" width="34" height="60" rx="6" fill="#fff"/><rect x="52" y="20" width="34" height="60" rx="6" fill="#fff" opacity=".55"/></svg></span><div><div class="num">05</div><h2>안 보는 OTT 해지</h2><div class="amt">안 보는 달 한 달치 전액</div></div></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">누가</div><p>지난달 한 편도 안 튼 OTT가 있는 사람. 보고 싶은 게 생긴 달만 켜는 게 정답이고, 해지해도 <mark>낸 기간까지는</mark> 그대로 봅니다.</p></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">준비물</div><ul class="prep"><li>각 OTT 앱·웹 로그인</li><li>어디로 결제되는지 — 카드 직접 · 앱스토어 · 통신사 요금제 포함 중 하나(해지 창구가 달라요)</li></ul></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">순서</div><ol class="steps"><li><div><b>결제 경로 확인</b><span>OTT 계정 페이지의 멤버십·결제 정보에서 봅니다. 넷플릭스는 <mark>해지 버튼이 안 보이면 통신사 등 결제 파트너를 통해 가입한 것</mark> — 이 경우 그 파트너에서 해지해야 해요(넷플릭스 공식).</span></div></li><li><div><b>직접 결제면 앱·웹에서</b><span>넷플릭스: <mark>계정 → 멤버십 관리 → 해지 → 해지 완료하기</mark>. 다른 OTT도 계정·구독 관리 메뉴에 같은 구조로 있는데, 사업자마다 화면이 달라 각 고객센터 안내를 따르세요.</span></div></li><li><div><b>앱스토어 결제면</b><span>「앱 구독 취소」 칸(02)의 아이폰·안드로이드 경로로.</span></div></li><li><div><b>통신사 요금제 포함이면</b><span>요금제에 OTT가 딸려 있는데 <mark>따로 또 결제 중</mark>인지 확인 — 둘 중 하나는 끊습니다. 요금제 포함분 자체는 요금제를 바꿔야 빠져요(「약정 끝난 요금제」 칸).</span></div></li></ol></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">기한</div><p class="when">넷플릭스는 해지해도 <mark>결제 주기 종료일까지</mark> 시청 가능(넷플릭스 공식 — 정확한 날짜는 결제 내역 페이지). 그러니 다음 결제일 직전이 아니라 <mark>지금</mark> 눌러두면 됩니다.</p></div>
+    <div class="row"><div class="lb warn">여기서 막힘</div><ul class="traps"><li>「말일까지」가 아니라 <mark>결제 주기 종료일</mark>까지예요 — 결제일이 15일이면 다음 달 14일까지. 카드에 말일이라고 적힌 건 이 뜻.</li><li>넷플릭스 외 OTT의 해지 후 시청 규정은 이번에 확인 못 했어요 — 사업자마다 다름, 해지 화면의 안내 문구가 기준.</li><li>계정 공유 중이면 결제자 계정에서만 해지돼요.</li></ul></div>
+    <div class="row"><div class="lb link">어디서</div><div class="links"><a href="https://help.netflix.com/ko/node/407">넷플릭스 해지 안내 <small>help.netflix.com/ko/node/407</small></a></div></div>
+    <div class="src">출처 · 18_새는돈 · 넷플릭스 고객센터 node/407 (2026-09-03 확인) · 다른 OTT는 미확인</div>
+  </section>
+  <section class="item" id="i6">
+    <div class="ih"><span class="ic" style="width:44px;height:44px;background:#7A4BD6"><svg viewBox="0 0 100 100" width="31.68" height="31.68"><rect x="14" y="26" width="72" height="48" rx="8" fill="#fff"/><rect x="14" y="38" width="72" height="10" fill="#7A4BD6"/><rect x="24" y="58" width="24" height="7" rx="3" fill="#7A4BD6"/></svg></span><div><div class="num">06</div><h2>장롱 카드 해지 · 연회비 환급</h2><div class="amt">연회비 전액(연 1회) · 해지하면 남은 기간분 일할 환급</div></div></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">누가</div><p>1년 넘게 안 긁은 카드가 있는 사람. 안 써도 연회비는 나가고, 해지하면 <mark>해지한 날부터 남은 기간의 연회비를 일할계산해 돌려줘야</mark> 합니다(여신전문금융업법 기준, 생활법령 안내).</p></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">준비물</div><ul class="prep"><li>카드사 앱 로그인 — 카드별 <mark>연회비 청구일</mark>과 최근 사용일 확인</li><li>결제 대기 중인 할부·자동납부가 그 카드에 걸려 있는지</li></ul></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">순서</div><ol class="steps"><li><div><b>안 쓰는 카드 고르기</b><span>카드사 앱에서 카드별 연회비·청구일·마지막 사용일을 봅니다. 1년 넘게 안 쓴 것부터.</span></div></li><li><div><b>자동납부 먼저 옮기기</b><span>그 카드로 나가는 자동납부(통신·보험·구독)가 있으면 다른 카드로 옮겨두고 해지. 어카운트인포 「카드자동납부」에서 한 번에 보여요.</span></div></li><li><div><b>카드 해지</b><span>카드사 앱의 카드 관리·해지 메뉴 또는 고객센터. 화면 이름은 카드사마다 다름 — 앱 검색창에 「해지」.</span></div></li><li><div><b>연회비 환급 확인</b><span>해지일 기준 일할 환급이 <mark>10영업일 안</mark>에 들어와야 해요(확인 지연 시 최대 3개월, 생활법령 안내). 카드 발급·배송비와 이미 쓴 부가서비스 비용은 빠집니다.</span></div></li></ol></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">기한</div><p class="when"><mark>연회비 청구일 전에</mark> 해지하면 다음 연회비가 안 나가고, 청구된 직후라도 남은 기간분은 돌려받아요. 기한보다 「자동납부 옮기기」 순서가 중요.</p></div>
+    <div class="row"><div class="lb warn">여기서 막힘</div><ul class="traps"><li>연회비보다 큰 혜택(공항 라운지·할인)을 실제로 쓰는 카드는 남겨도 됩니다 — <mark>작년에 그 혜택을 썼는지</mark>가 기준.</li><li>1년 이상 안 쓴 카드는 카드사가 「계속 쓰시겠어요?」 문자를 보내고 <mark>30일 무응답이면 이용정지</mark>돼요(생활법령 안내) — 그 문자를 스팸으로 지나치면 카드가 멈춰 있는 상태.</li><li>해지 방어 상담(「혜택 드릴게요」)이 붙을 수 있어요 — 해지 의사만 반복하면 됩니다.</li><li>그 카드에 남은 포인트는 해지 전에 쓰거나 현금화.</li></ul></div>
+    <div class="row"><div class="lb link">어디서</div><div class="links"><a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=585&amp;ccfNo=4&amp;cciNo=2&amp;cnpClsNo=1">찾기쉬운 생활법령 · 신용카드 해지 <small>easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=585&amp;ccfNo=4&amp;cciNo=2&amp;cnpClsNo=1</small></a><span>어카운트인포 앱 <small>앱스토어·플레이스토어</small></span></div></div>
+    <div class="src">출처 · 18_새는돈 · 찾기쉬운 생활법령정보(csmSeq 585 — 연회비 일할 반환·10영업일·휴면카드 이용정지, 2026-09-03 확인)</div>
+  </section>
+  <section class="item" id="i7">
+    <div class="ih"><span class="ic" style="width:44px;height:44px;background:#E0A020"><svg viewBox="0 0 100 100" width="31.68" height="31.68"><circle cx="50" cy="50" r="34" fill="#fff"/><text x="50" y="63" text-anchor="middle" font-size="40" font-weight="900" fill="#E0A020" font-family="sans-serif">₩</text></svg></span><div><div class="num">07</div><h2>약정 끝난 요금제 — 25% 재신청</h2><div class="amt">월 통신요금의 25%</div></div></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">누가</div><p>개통한 지 24개월 넘었는데 그 뒤로 아무것도 안 바꾼 사람, 또는 자급제·중고폰으로 개통한 사람. 약정이 끝난 폰은 <mark>선택약정(25% 요금할인)을 다시 걸 수 있어요</mark> — 통신 3사 공통 제도(스마트초이스).</p></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">준비물</div><ul class="prep"><li>통신사 앱 로그인(명의자 본인)</li><li>내 폰이 대상인지 — 스마트초이스 「25% 요금할인 대상단말기 조회」로 가입 없이 확인 가능</li><li>최근 3달 데이터 사용량(요금제 내릴지 같이 볼 것)</li></ul></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">순서</div><ol class="steps"><li><div><b>약정 만료일 확인</b><span>통신사 앱 가입정보에서 약정 만료일·현재 요금제부터. KT는 마이케이티 <mark>[메뉴 → 마이 → 가입/이용 → 가입정보변경 → 요금할인 재약정 → 조회]</mark>에서 대상 여부까지 바로 나와요.</span></div></li><li><div><b>기간 고르기</b><span>12개월 또는 24개월. <mark>할인율은 둘 다 25%로 같고 중도해지 위약금은 12개월이 적어요</mark>(스마트초이스·KT 공식). 1년 안에 기변·알뜰폰 갈 수도 있으면 12개월.</span></div></li><li><div><b>신청</b><span>앱에서 바로, 또는 대리점·판매점, 또는 전화 — SKT 080-8960-114 · KT 080-2320-114 · U+ 080-8500-130(스마트초이스 안내).</span></div></li><li><div><b>요금제도 같이</b><span>데이터가 매달 남으면 요금제를 내리고 나서 25%를 겁니다. 순서를 바꾸면 큰 요금제에 약정이 걸려요.</span></div></li></ol></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">기한</div><p class="when">약정 끝난 날부터 <mark>매달 25%가 안 붙고 지나가는 중</mark>. 재신청하면 그 달부터 할인.</p></div>
+    <div class="row"><div class="lb warn">여기서 막힘</div><ul class="traps"><li>재신청은 <mark>새 약정</mark>이에요 — 기간 안에 해지·번호이동하면 할인반환금이 생깁니다. 그래서 12개월.</li><li>공시지원금 받고 산 폰은 <mark>24개월이 지나야</mark> 재약정 대상(스마트초이스 안내). 앱 조회에서 대상 아님으로 나오면 그 이유.</li><li>명의자가 부모님이면 부모님 인증이 필요해요.</li></ul></div>
+    <div class="row"><div class="lb link">어디서</div><div class="links"><a href="https://m.smartchoice.or.kr/smc/service/danpageNew2.do">스마트초이스 · 선택약정 신청방법 <small>m.smartchoice.or.kr/smc/service/danpageNew2.do</small></a><a href="https://m.smartchoice.or.kr/smc/mobile/find_discount.do">스마트초이스 · 25% 대상단말기 조회 <small>m.smartchoice.or.kr/smc/mobile/find_discount.do</small></a><a href="https://help.kt.com/servicetip/ServiceTipInfo.do?idx=1032">KT 요금할인 재약정 <small>help.kt.com/servicetip/ServiceTipInfo.do?idx=1032</small></a></div></div>
+    <div class="src">출처 · 52_통신비 · 스마트초이스(KTOA·과기정통부 통신요금정보포털, 2026-09-03 확인) · KT 고객지원 idx 1032</div>
+  </section>
+  <section class="item" id="i8">
+    <div class="ih"><span class="ic" style="width:44px;height:44px;background:#1F9D8A"><svg viewBox="0 0 100 100" width="31.68" height="31.68"><rect x="18" y="16" width="64" height="62" rx="10" fill="#fff"/><rect x="26" y="26" width="48" height="22" rx="3" fill="#1F9D8A"/><circle cx="34" cy="64" r="6" fill="#1F9D8A"/><circle cx="66" cy="64" r="6" fill="#1F9D8A"/><rect x="28" y="78" width="10" height="8" fill="#fff"/><rect x="62" y="78" width="10" height="8" fill="#fff"/></svg></span><div><div class="num">08</div><h2>배달 구독 — 손익분기 재고 후 해지</h2><div class="amt">구독료 − (지난달 주문 횟수 × 회당 절감 배달비) — 양수면 그만큼 손해</div></div></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">누가</div><p>배달앱·쇼핑앱 멤버십에 배달비 무료가 포함된 걸 구독 중인데 <mark>한 달에 몇 번 시키는지 세어본 적 없는</mark> 사람. 계산은 한 번, 효과는 매달.</p></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">준비물</div><ul class="prep"><li>배달앱 주문내역(지난 1~3달)</li><li>구독료 금액(앱 멤버십 화면)</li></ul></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">순서</div><ol class="steps"><li><div><b>횟수 세기</b><span>주문내역에서 지난달 배달 횟수 — 30초. 여러 달 평균이면 더 정확.</span></div></li><li><div><b>손익분기 횟수</b><span><mark>구독료 ÷ 회당 아껴지는 배달비</mark> = 이만큼은 시켜야 본전. 예를 들어 배달비를 회당 3천 원 아끼는 구독이 월 9천 원이면 3회 — 숫자는 계산 예시고, 실제 구독료·배달비는 앱에서 확인하세요.</span></div></li><li><div><b>덜 시키면 해지</b><span>앱의 <mark>마이페이지 → 멤버십·구독 관리 → 해지</mark>. 화면 이름은 사업자마다 달라요 — 확인된 예: 쿠팡 와우는 <mark>마이쿠팡 → 와우 멤버십 → 해지하기</mark>(쿠팡 뉴스룸 공식 FAQ). 다른 앱은 그 앱 고객센터 안내를 따르세요.</span></div></li><li><div><b>남은 기간 확인</b><span>해지해도 종료 예정일까지 혜택이 유지되는 구조가 일반적이에요(쿠팡 공식 — 당월 혜택 미사용이면 환불). 다른 앱은 해지 화면 문구가 기준.</span></div></li></ol></div>
+    <div class="row"><div class="lb" style="background:#CFE8FB">기한</div><p class="when">기한 없음. 다만 해지는 <mark>다음 결제일 전</mark>이어야 한 달치가 안 나가요 — 결제일이 언제인지 멤버십 화면에서 오늘 확인.</p></div>
+    <div class="row"><div class="lb warn">여기서 막힘</div><ul class="traps"><li>무료체험이 유료로 <mark>자동 전환</mark>되는 구조 — 체험 중이면 종료일을 캘린더에.</li><li>쇼핑 멤버십에 배달이 딸려 오는 경우 배달앱 구독과 <mark>이중</mark>일 수 있어요 — 둘 다 켜져 있으면 하나는 손해.</li><li>해지 화면 마지막에 「이 혜택 포기하시겠어요?」 방어 화면이 나와요 — 계산한 숫자를 믿으세요.</li><li>최소주문 채우려고 더 시킨 사이드가 배달비보다 큰 지출 — 카드 덱(58)이 강조한 지점.</li></ul></div>
+    <div class="row"><div class="lb link">어디서</div><div class="links"><a href="https://news.coupang.com/archives/64216/">쿠팡 뉴스룸 · 와우 멤버십 FAQ <small>news.coupang.com/archives/64216/</small></a><span>쓰는 배달앱 고객센터 <small>앱 안 「고객센터」 메뉴</small></span></div></div>
+    <div class="src">출처 · 58_배달비 · 쿠팡 뉴스룸 FAQ(64216, 2026-09-03 확인) · 그 외 배달앱 구독 해지 경로는 공식 페이지 미확인 — 실명 미기재</div>
+  </section>
+ <section class="check"><h3>오늘 <b>30분</b> 체크리스트</h3><ul><li><i></i>어카운트인포 앱 → 자동이체·카드자동납부 목록 한 번 열기(해지·변경까지 됨 — 금융결제원, 해지는 영업일 9~17시)</li><li><i></i>통신사 앱 「부가서비스 조회」 — 이름 모르는 유료 항목 해지</li><li><i></i>설정(아이폰) 또는 Play 스토어(갤럭시) 「구독」 목록 — 안 쓰는 것 취소</li><li><i></i>통신사 앱 「휴대폰결제 내역」 — 한도 내리기 또는 차단</li><li><i></i>전월세면 관리비 고지서에 「장기수선충당금」 줄 있는지 + 계약서 특약</li><li><i></i>지난달 한 편도 안 튼 OTT — 결제 경로 확인 후 해지</li><li><i></i>카드사 앱 「연회비 청구일」 — 1년 넘게 안 쓴 카드 자동납부 옮기고 해지</li><li><i></i>통신사 앱 약정 만료일 — 끝났으면 25% 재신청(12개월) · 스마트초이스 미환급금 조회(가입 없이, 평일 낮만)</li></ul></section>
+ <p class="foot">절차·화면 이름은 바뀝니다. 해지 직전 각 사업자 앱의 안내가 최종이에요. 이 가이드는 2026-09-03 기준으로 공식 안내에서 확인된 절차만 적었고, 확인 못 한 부분은 「사업자마다 다름」으로 남겼습니다. 요금·구독료 금액은 수시로 바뀌어 적지 않았어요.</p>
+</div>
+<div class="bar"><div class="barin"><a class="btn pdf" href="./file.pdf" download="안쓰면서-내는돈-8-해지가이드.pdf">📄 PDF로 저장</a><a class="btn ig" href="https://www.instagram.com/ildan_share_/">＠ 일단공유</a></div></div>
+</body></html>
